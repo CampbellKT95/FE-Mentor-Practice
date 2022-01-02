@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+p {
+  font-size: 18px;
+  color: hsl(215, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card-container {
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  overflow: hidden;
+  margin: 20% auto 20% auto;
+  border-radius: 10px;
+}
+
+.img-container {
+  margin: 2rem auto auto auto;
+  display: flex;
+}
+
+.equilibrium-img {
+  border-radius: 10px;
+  width: 85%;
+  margin: auto;
+}
+
+.name-description-container {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin: auto auto auto 7.5%;
+}
+
+.name {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  margin-bottom: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.description {
+  font-size: 18px;
+  color: hsl(215, 51%, 70%);
+  width: 80%;
+  line-height: 1.5;
+}
+
+.price-timer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 0 0 0 7.5%;
+  width: 85%;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto auto auto 0.25rem;
+  gap: 10px;
+}
+
+.ethereum-icon {
+  margin: 1.25rem auto auto auto;
+}
+
+.price {
+  color: #00fff8;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  grid-column: 2;
+  margin: auto 0 auto auto;
+  gap: 10px;
+}
+
+.clock-icon {
+  height: 18px;
+  margin: 1.25rem auto auto auto;
+}
+
+.creation-container {
+  display: grid;
+  grid-template-columns: 0.01fr 1fr;
+  gap: 10px;
+  width: 85%;
+  border-top: 1px solid hsl(215, 51%, 70%);
+  margin: auto;
+  padding-top: 0.5rem;
+}
+
+.avatar-img {
+  height: 36px;
+  width: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: auto auto auto 0;
+}
+
+.creator-name-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin: auto auto auto 0;
+}
+
+.creator-name {
+  color: hsl(0, 0%, 100%);
+}

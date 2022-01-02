@@ -1,0 +1,7 @@
+
+Currently only for mobile:
+    need media queries for desktop (maybe utilize clamp as well?)
+
+add active state
+    add hover state on image to change color to light blue
+    add js to make eye icon appear
