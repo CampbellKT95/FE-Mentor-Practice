@@ -23,12 +23,32 @@ p {
 .img-container {
   margin: 2rem auto auto auto;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .equilibrium-img {
   border-radius: 10px;
   width: 85%;
   margin: auto;
+  cursor: pointer;
+}
+
+.active-state-backdrop {
+  display: none;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 85%;
+  border-radius: 10px;
+  margin: auto auto auto 1.8rem;
+  cursor: pointer;
+}
+
+.active-state-icon {
+  height: 50px;
+  width: 50px;
+  margin: 44% auto auto 42.5%;
 }
 
 .name-description-container {
@@ -43,6 +63,7 @@ p {
   font-weight: 600;
   margin-bottom: 0;
   font-family: "Outfit", sans-serif;
+  cursor: pointer;
 }
 
 .description {
