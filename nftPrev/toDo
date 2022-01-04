@@ -1,9 +1,3 @@
 
 Currently only for mobile:
     need media queries for desktop (maybe utilize clamp as well?)
-
-add active state
-    needs to be created like a backdrop:
-        position: absolute with higher z-index over image?
-        add hover state on image to change color to hsl(178, 100%, 50%) with    lower opacity
-        add js to make eye icon appear
