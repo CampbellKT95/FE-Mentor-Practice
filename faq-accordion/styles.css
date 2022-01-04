@@ -16,6 +16,7 @@ p {
   width: 90%;
   margin: 11rem auto auto auto;
   position: relative;
+  padding-bottom: 3rem;
 }
 
 .img {
@@ -42,10 +43,15 @@ p {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
-.question-arrow-container h2 {
+.questions {
   font-weight: 400;
   font-size: 1rem;
   padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.questions:hover {
+  color: hsl(14, 88%, 65%);
 }
 
 .arrow-icon {
