@@ -54,14 +54,25 @@ p {
   color: hsl(14, 88%, 65%);
 }
 
-.arrow-icon {
+.arrow-icon-unactive {
+  transition: all linear 0.2s;
   width: 15px;
   height: 10px;
-  margin: 1.1rem 0 auto auto;
+  margin: 1.8rem 0 auto auto;
+  cursor: pointer;
+}
+
+.arrow-icon-active {
+  transition: all linear 0.2s;
+  transform: rotate(180deg);
+  width: 15px;
+  height: 10px;
+  margin: 1.8rem 0 auto auto;
   cursor: pointer;
 }
 
 .faq-answer-container-hidden {
+  transition: all linear 0.2s;
   line-height: 1.5;
   grid-column: 1 / -1;
   width: 90%;
@@ -70,6 +81,7 @@ p {
 }
 
 .faq-answer-container-active {
+  transition: all linear 0.2s;
   line-height: 1.5;
   grid-column: 1 / -1;
   width: 90%;
