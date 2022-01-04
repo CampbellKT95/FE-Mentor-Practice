@@ -61,10 +61,18 @@ p {
   cursor: pointer;
 }
 
-.faq-answer-container {
+.faq-answer-container-hidden {
   line-height: 1.5;
   grid-column: 1 / -1;
   width: 90%;
   overflow: hidden;
   max-height: 0rem;
+}
+
+.faq-answer-container-active {
+  line-height: 1.5;
+  grid-column: 1 / -1;
+  width: 90%;
+  overflow: hidden;
+  max-height: 10rem;
 }
