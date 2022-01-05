@@ -84,6 +84,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.6fr 1fr;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-details:hover {
+  color: hsl(235, 45%, 61%);
 }
 
 .section-title {
@@ -110,6 +115,10 @@ body {
   margin: auto 1.5rem 0 auto;
   font-size: 35px;
   cursor: pointer;
+}
+
+.ellipses:hover {
+  color: white;
 }
 
 .last-week-hours {
@@ -139,4 +148,14 @@ body {
 .exercise {
   background-color: hsl(145, 58%, 55%);
   background-image: url("./time-tracking-dashboard-main//images/icon-exercise.svg");
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("./time-tracking-dashboard-main/images/icon-social.svg");
+}
+
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("./time-tracking-dashboard-main/images/icon-self-care.svg");
 }
