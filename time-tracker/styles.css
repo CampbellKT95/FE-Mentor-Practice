@@ -159,3 +159,51 @@ body {
   background-color: hsl(43, 84%, 65%);
   background-image: url("./time-tracking-dashboard-main/images/icon-self-care.svg");
 }
+
+@media screen and (min-width: 1440px) {
+  .tracker-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 70%;
+    margin: 2rem auto 2rem auto;
+  }
+
+  .profile-card {
+    grid-column: 1;
+    grid-row: 1 / -1;
+  }
+
+  .pic-name-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-img {
+    margin: 2rem auto auto 2rem;
+  }
+
+  .pic-name-container p {
+    margin: 2rem auto auto 2rem;
+  }
+
+  .pic-name-container h2 {
+    font-size: 36px;
+    padding-bottom: 6rem;
+    margin: auto auto auto 2rem;
+  }
+
+  .time-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .time-frame p {
+    cursor: pointer;
+    padding: 0;
+    margin: 0.5rem auto 0.5rem 2rem;
+  }
+}
