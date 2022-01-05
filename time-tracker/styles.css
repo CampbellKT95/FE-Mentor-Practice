@@ -206,4 +206,52 @@ body {
     padding: 0;
     margin: 0.5rem auto 0.5rem 2rem;
   }
+
+  .card-details {
+    background-color: hsl(235, 46%, 20%);
+    display: grid;
+    grid-template-columns: 1fr 0.25fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .card-details:hover {
+    background-color: hsl(235, 45%, 61%);
+  }
+
+  .section-title {
+    font-size: 18px;
+    color: white;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 1.2rem auto 0 1.5rem;
+  }
+
+  .section-hours {
+    color: white;
+    font-size: 36px;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 1rem auto 0 1.5rem;
+    font-weight: 300;
+  }
+
+  .ellipses {
+    color: hsl(236, 100%, 87%);
+    grid-column: 2;
+    grid-row: 1 / -1;
+    margin: 0 1rem 0 auto;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .ellipses:hover {
+    color: white;
+  }
+
+  .last-week-hours {
+    color: hsl(236, 100%, 87%);
+    grid-column: 1;
+    grid-row: 3;
+    margin: 1rem auto auto 1.5rem;
+  }
 }
