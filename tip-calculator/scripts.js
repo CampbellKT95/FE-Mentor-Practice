@@ -52,11 +52,13 @@ function selectTipOption(e) {
     console.log(chosen)
 
     //based on which is true, change background color & save for tip calc
+    let iteration = 0;
     for (let element of Object.keys(chosen)) {
-        let iteration = 0;
         if (chosen[element] === true) {
-            tipOptionActive[iteration].style.backGroundColor = "hsl(184, 14%, 56%)"
-        };
+            tipOptionActive[iteration].style.backgroundColor = "hsl(184, 14%, 56%)"
+        } else {
+            tipOptionActive[iteration].style.backgroundColor = "hsl(183, 100%, 15%)"
+        }
         iteration++;
     };
 };
