@@ -1,5 +1,6 @@
 
-current issue is function only runs once, need to add it to the onClick
+background changing for loop is currently not working, though set up correctly
+    Unsure of issue, resolving
 
 Add active state (click)
     make tip-options change color to hsl(185, 41%, 84%) on click

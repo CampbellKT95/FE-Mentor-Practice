@@ -23,10 +23,14 @@ const initialValue = {
     custom : false
 }
 
+for (let i = 0; i < tipOptionActive.length; i++) {
+    tipOptionActive[i].addEventListener("click", selectTipOption)
+};
+
 function selectTipOption() {
     //looking to caputre JUST the single clicked item & revert rest
     for (let i = 0; i < tipOptionActive.length; i++) {
-        tipOptionActive[i].addEventListener("click", () => {
+        console.log(chosen)
             switch (tipOptionActive[i].innerHTML) {
                 case "5%":
                     chosen = {...initialValue, five: true};
@@ -47,46 +51,16 @@ function selectTipOption() {
                     chosen = {...initialValue, custom: true};
                     break;
             };
-        });
-        console.log(chosen)
-    };
-    
-    //above works, below does not
+        };
     //based on which is true, change background color & save for tip calc
-    console.log("made it")
     for (let element of Object.keys(chosen)) {
         let iteration = 0;
         if (chosen[element] === true) {
             tipOptionActive[iteration].style.backGroundColor = "hsl(184, 14%, 56%)"
         };
         iteration++;
-    }
-
-    // if (chosen.five === true) {
-        // tipOptionActive[0].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     tipPercentage = 5
-    // } else if (chosen.ten === true) {
-    //     tipOptionActive[1].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     tipPercentage = 10
-    // } else if (chosen.fifteen === true) {
-    //     tipOptionActive[2].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     tipPercentage = 15
-    // } else if (chosen.twentyFive === true) {
-    //     tipOptionActive[3].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     tipPercentage = 25
-    // } else if (chosen.fifty === true) {
-    //     tipOptionActive[4].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     tipPercentage = 50
-    // } else if (chosen.custom === true) {
-    //     tipOptionActive[0].style.backGroundColor = "hsl(184, 14%, 56%)"
-    //     // will need to change this once custom tip input has been set up
-    //     tipPercentage = 0
-    //     //
-    // }
-    // console.log(tipPercentage)
+    };
 };
-
-selectTipOption();
 
 
 "hsl(183, 100%, 15%)"
