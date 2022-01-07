@@ -59,6 +59,10 @@ body {
   border-radius: 5px;
 }
 
+.bill input:focus {
+  outline: 2px solid hsl(185, 41%, 84%);
+}
+
 .tip-wrapper {
   display: flex;
   flex-direction: column;
@@ -89,6 +93,7 @@ body {
   text-align: center;
   border-radius: 5px;
   padding: 0.5rem 0;
+  cursor: pointer;
 }
 
 .custom-tip-option {
