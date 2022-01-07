@@ -75,8 +75,8 @@ function selectTipOption(e) {
 
 //capturing onChange for number of people to split the bill
 const numberOfPeople = document.querySelector(".number-of-people-input");
-const numberOfPeopleInput = document.querySelector(".number-of-people-error-span")
-numberOfPeople.addEventListener("change", setNumberOfPeople)
+const numberOfPeopleInput = document.querySelector(".number-of-people-error-span");
+numberOfPeople.addEventListener("change", setNumberOfPeople);
 
 function setNumberOfPeople(e) {
     numberOfPeople.value = e.target.value;
@@ -86,6 +86,16 @@ function setNumberOfPeople(e) {
     } else {
         numberOfPeople.style.border = "2px solid hsl(185, 41%, 84%)";
         numberOfPeopleInput.className = "number-of-people-error-hide"
-    }
-}
+    };
+};
+
+//calculate tip per person & total per person with some event listener to 
+//trigger it also
+//need to use tipPercentage / bill / numberofPeopleInput
+function calculateTip() {
+    const tipAmount = (parseInt(tipPercentage)/100) * parseInt(bill.value);
+};
+
+
+//add reset
 

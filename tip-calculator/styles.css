@@ -57,6 +57,7 @@ body {
   padding: 0.5rem;
   color: hsl(183, 100%, 15%);
   border-radius: 5px;
+  width: 95%;
 }
 
 .bill input:focus {
