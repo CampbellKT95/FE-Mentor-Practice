@@ -27,31 +27,30 @@ for (let i = 0; i < tipOptionActive.length; i++) {
     tipOptionActive[i].addEventListener("click", selectTipOption)
 };
 
-function selectTipOption() {
+function selectTipOption(e) {
     //looking to caputre JUST the single clicked item & revert rest
-    for (let i = 0; i < tipOptionActive.length; i++) {
-        console.log(chosen)
-            switch (tipOptionActive[i].innerHTML) {
-                case "5%":
-                    chosen = {...initialValue, five: true};
-                    break;
-                case "10%":
-                    chosen = {...initialValue, ten: true};
-                    break;
-                case "15%":
-                    chosen = {...initialValue, fifteen: true};
-                    break;
-                case "25%":
-                    chosen = {...initialValue, twentyFive: true};
-                    break;
-                case "50%":
-                    chosen = {...initialValue, fifty: true};
-                    break;
-                case "custom":
-                    chosen = {...initialValue, custom: true};
-                    break;
-            };
-        };
+    switch (e.target.innerHTML) {
+        case "5%":
+            chosen = {...initialValue, five: true};
+            break;
+        case "10%":
+            chosen = {...initialValue, ten: true};
+            break;
+        case "15%":
+            chosen = {...initialValue, fifteen: true};
+            break;
+        case "25%":
+            chosen = {...initialValue, twentyFive: true};
+            break;
+        case "50%":
+            chosen = {...initialValue, fifty: true};
+            break;
+        case "custom":
+            chosen = {...initialValue, custom: true};
+            break;
+    };
+    console.log(chosen)
+
     //based on which is true, change background color & save for tip calc
     for (let element of Object.keys(chosen)) {
         let iteration = 0;
