@@ -105,6 +105,7 @@ body {
   padding: 0.5rem 0;
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
+  border: none;
 }
 
 .number-of-people-wrapper {

@@ -1,4 +1,4 @@
-
+background change currently changes all to custom background color...
 
 Add active state (click)
     make tip-options change color to hsl(185, 41%, 84%) on click

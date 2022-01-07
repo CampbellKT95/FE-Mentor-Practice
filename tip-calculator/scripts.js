@@ -49,23 +49,21 @@ function selectTipOption(e) {
             chosen = {...initialValue, custom: true};
             break;
     };
-    console.log(chosen)
 
     //based on which is true, change background color & save for tip calc
     let iteration = 0;
     for (let element of Object.keys(chosen)) {
+ 
         if (chosen[element] === true) {
             tipOptionActive[iteration].style.backgroundColor = "hsl(184, 14%, 56%)"
+        } else if (tipOptionActive[iteration].placeholder === "Custom") {
+            tipOptionActive[iteration].style.backgroundColor = "hsl(189, 41%, 97%)"
         } else {
             tipOptionActive[iteration].style.backgroundColor = "hsl(183, 100%, 15%)"
-        }
+        };
         iteration++;
     };
 };
-
-
-"hsl(183, 100%, 15%)"
-"hsl(184, 14%, 56%)"
 
 //make custom an input with onChange like above with bill
 
