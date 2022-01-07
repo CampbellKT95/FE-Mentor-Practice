@@ -2,6 +2,9 @@
 const bill = document.querySelector("#bill-input");
 bill.addEventListener("change", (e) => bill.value = e.target.value);
 
+const customTip = document.querySelector(".custom-tip-option");
+customTip.addEventListener("change", (e) => customTip.value = e.target.value)
+
 //tip choice
 let tipPercentage = 0;
 const tipOptionActive = document.querySelectorAll(".chosen-tip");
@@ -32,38 +35,57 @@ function selectTipOption(e) {
     switch (e.target.innerHTML) {
         case "5%":
             chosen = {...initialValue, five: true};
+            tipPercentage = 5;
             break;
         case "10%":
             chosen = {...initialValue, ten: true};
+            tipPercentage = 10;
             break;
         case "15%":
             chosen = {...initialValue, fifteen: true};
+            tipPercentage = 15;
             break;
         case "25%":
             chosen = {...initialValue, twentyFive: true};
+            tipPercentage = 25;
             break;
         case "50%":
             chosen = {...initialValue, fifty: true};
+            tipPercentage = 50;
             break;
         case "custom":
             chosen = {...initialValue, custom: true};
+            tipPercentage = customTip
             break;
     };
-
     //based on which is true, change background color & save for tip calc
     let iteration = 0;
     for (let element of Object.keys(chosen)) {
  
         if (chosen[element] === true) {
-            tipOptionActive[iteration].style.backgroundColor = "hsl(184, 14%, 56%)"
+            tipOptionActive[iteration].style.backgroundColor = "hsl(184, 14%, 56%)";
         } else if (tipOptionActive[iteration].placeholder === "Custom") {
-            tipOptionActive[iteration].style.backgroundColor = "hsl(189, 41%, 97%)"
+            tipOptionActive[iteration].style.backgroundColor = "hsl(189, 41%, 97%)";
         } else {
-            tipOptionActive[iteration].style.backgroundColor = "hsl(183, 100%, 15%)"
+            tipOptionActive[iteration].style.backgroundColor = "hsl(183, 100%, 15%)";
         };
         iteration++;
     };
 };
 
-//make custom an input with onChange like above with bill
+//capturing onChange for number of people to split the bill
+const numberOfPeople = document.querySelector(".number-of-people-input");
+const numberOfPeopleInput = document.querySelector(".number-of-people-error-span")
+numberOfPeople.addEventListener("change", setNumberOfPeople)
+
+function setNumberOfPeople(e) {
+    numberOfPeople.value = e.target.value;
+    if (parseInt(numberOfPeople.value) === 0) {
+        numberOfPeople.style.border = "2px solid red";
+        numberOfPeopleInput.className = "number-of-people-error";
+    } else {
+        numberOfPeople.style.border = "2px solid hsl(185, 41%, 84%)";
+        numberOfPeopleInput.className = "number-of-people-error-hide"
+    }
+}
 

@@ -108,6 +108,10 @@ body {
   border: none;
 }
 
+.custom-tip-option:focus {
+  outline: 2px solid hsl(185, 41%, 84%);
+}
+
 .number-of-people-wrapper {
   display: flex;
   flex-direction: column;
@@ -117,13 +121,29 @@ body {
   position: relative;
 }
 
+.number-of-people-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number-of-people-error-hide {
+  display: none;
+}
+
+.number-of-people-error {
+  color: red;
+  font-size: 12px;
+  margin: 2.2rem auto 0 auto;
+}
+
 .number-of-people-wrapper h2 {
   font-size: 18px;
   margin: 2rem auto 0 0;
   color: hsl(186, 14%, 43%);
 }
 
-.number-of-people-wrapper span {
+.person-icon-span {
   color: hsl(184, 14%, 56%);
   font-size: 24px;
   position: absolute;
@@ -138,6 +158,11 @@ body {
   padding: 0.5rem;
   color: hsl(183, 100%, 15%);
   border-radius: 5px;
+  width: 95%;
+}
+
+.number-of-people-wrapper input:focus {
+  outline: 2px solid hsl(185, 41%, 84%);
 }
 
 .subtotal-wrapper {
