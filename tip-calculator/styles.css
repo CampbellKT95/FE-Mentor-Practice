@@ -242,3 +242,21 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+
+  .user-interface-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .subtotal-wrapper {
+    height: 25rem;
+    margin: auto 1.5rem auto auto;
+  }
+}
