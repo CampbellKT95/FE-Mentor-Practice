@@ -86,16 +86,33 @@ function setNumberOfPeople(e) {
     } else {
         numberOfPeople.style.border = "2px solid hsl(185, 41%, 84%)";
         numberOfPeopleInput.className = "number-of-people-error-hide"
+        calculateTip();
     };
 };
 
-//calculate tip per person & total per person with some event listener to 
-//trigger it also
-//need to use tipPercentage / bill / numberofPeopleInput
+const tip = document.querySelector(".tip-amount")
+const total = document.querySelector(".total-amount")
+
 function calculateTip() {
-    const tipAmount = (parseInt(tipPercentage)/100) * parseInt(bill.value);
+    //tip
+    const totalTipAmount = (parseInt(tipPercentage)/100) * parseInt(bill.value);
+    const tipPerPerson = parseInt(totalTipAmount)/parseInt(numberOfPeople.value)
+    ;
+    tip.innerHTML = `${tipPerPerson}`;
+
+    //total
+    const totalPerPerson = (parseInt(bill.value) + parseInt(totalTipAmount))/parseInt(numberOfPeople.value);
+    total.innerHTML = `${totalPerPerson}`;
 };
 
-
-//add reset
+const resetBtn = document.querySelector(".reset-btn");
+resetBtn.addEventListener("click", reset);
+//reset all inputs
+function reset() {
+    bill.value = 0;
+    chosen = initialValue;
+    numberOfPeople.value = 1;
+    tip.innerHTML = "$0";
+    total.innerHTML = "$0";
+};
 
