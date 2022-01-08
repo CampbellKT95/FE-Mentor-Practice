@@ -110,7 +110,12 @@ resetBtn.addEventListener("click", reset);
 //reset all inputs
 function reset() {
     bill.value = 0;
+
     chosen = initialValue;
+    for (let i = 0; i < tipOptionActive.length - 1; i++) {
+        tipOptionActive[i].style.backgroundColor = "hsl(183, 100%, 15%)";
+    }
+
     numberOfPeople.value = 1;
     tip.innerHTML = "$0";
     total.innerHTML = "$0";
