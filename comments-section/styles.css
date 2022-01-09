@@ -3,13 +3,14 @@ body {
 }
 
 .comments-container {
-  width: 100%;
   margin: auto;
 }
 
 .comment-wrapper {
   background-color: white;
   width: 90%;
+  padding: 0.5rem;
+  margin: auto auto 1rem auto;
 }
 
 .user-wrapper {
@@ -30,11 +31,56 @@ body {
   width: 90%;
 }
 
+.comment p {
+  line-height: 1.5;
+}
+
+.like-reply-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+
+.like-number-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: hsl(228, 33%, 97%);
+  border-radius: 10px;
+  height: 2rem;
+  width: 5rem;
+}
+
+.like-number-wrapper p {
+  color: hsl(238, 40%, 52%);
+}
+
+.like-number-wrapper span {
+  color: hsl(239, 57%, 85%);
+  cursor: pointer;
+}
+
+.reply-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: hsl(238, 40%, 52%);
+  margin: 0 0 auto auto;
+}
+
 .add-comment-container {
   background-color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 90%;
   border-radius: 10px;
+  margin: auto;
 }
 
 .make-comment {
