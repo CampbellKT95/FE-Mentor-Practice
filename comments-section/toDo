@@ -1,0 +1,8 @@
+OVERVIEW -----------------------------------------------------------------------
+Initial thought: map through comments & create a specific div for each
+    ie. createElement("div") and so on, attaching children
+
+    create one comment section the way that I want it first, then worry about ^^
+
+
+NEXT UP ------------------------------------------------------------------------
