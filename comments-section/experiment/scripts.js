@@ -2,12 +2,11 @@ const commentsContainer = document.querySelector(".comments-container")
 
 for (const property in data) {
     if (property === "comments") {
-
         //will create each element, appending it to its parent div, and then
         //finally attach each parent div to commentsContainer
 
         for (let i = 0; i < data[property].length; i++) {
-            console.log(data[property][i]);
+            // console.log(data[property][i]);
 
             //first wrapper, contains profile-pic, username, timestamp
             let userWrapper = document.createElement("div");
@@ -15,6 +14,7 @@ for (const property in data) {
 
             let profilePic = document.createElement("img");
             profilePic.class = "avatar-img";
+            console.log(data[property][i].user.image.png)
             profilePic.src= data[property][i].user.image.png;
             profilePic.alt = data[property][i].user.username;
             userWrapper.appendChild(profilePic);
@@ -24,7 +24,7 @@ for (const property in data) {
             userWrapper.appendChild(username);
 
             let timeStamp = document.createElement("p");
-            timeStamp.innerHTML = data[property][i].user.createdAt;
+            timeStamp.innerHTML = data[property][i].createdAt;
             userWrapper.appendChild(timeStamp);
 
             //second wrapper, contains the comment
