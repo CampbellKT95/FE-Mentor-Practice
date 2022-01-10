@@ -1,6 +1,11 @@
 
 NEXT UP ------------------------------------------------------------------------
 
+make comments creation a function that takes an object and then creates 
+the comment
+
+split modal, comments AND USER COMMENTS into seperate scripts
+
 rather than an if statement, make each section a ternary that changes slightly
 depending on if it is currentUser or comments
 
@@ -13,3 +18,5 @@ will need to add comments as well; takes same shape though
 
 
 add modal when delete btn clicked
+
+have to be able to reply
