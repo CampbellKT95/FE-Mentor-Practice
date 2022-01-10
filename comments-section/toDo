@@ -1,2 +1,15 @@
 
 NEXT UP ------------------------------------------------------------------------
+
+rather than an if statement, make each section a ternary that changes slightly
+depending on if it is currentUser or comments
+
+check if currentUser loop:
+    make small changes to certain pieces of component with ternary:
+        reply ( should show EDIT/DELETE)
+        username (should show YOU)
+
+will need to add comments as well; takes same shape though
+
+
+add modal when delete btn clicked

@@ -1,7 +1,7 @@
 const commentsContainer = document.querySelector(".comments-container")
 
 for (const property in data) {
-    if (property === "comments") {
+    if (property === "comments" || property === "currentUser") {
         //will create each element, appending it to its parent div, and then
         //finally attach each parent div to commentsContainer
 
@@ -14,7 +14,6 @@ for (const property in data) {
 
             let profilePic = document.createElement("img");
             profilePic.className = "avatar-img";
-            console.log(data[property][i].user.image.png)
             profilePic.src= data[property][i].user.image.png;
             profilePic.alt = data[property][i].user.username;
             userWrapper.appendChild(profilePic);
@@ -64,11 +63,13 @@ for (const property in data) {
             let replyIconSpan = document.createElement("span");
 
             let replyIconImg = document.createElement("img");
-            replyIconImg.src = "../interactive-comments-section-main/images/icon-reply.svg";
+            replyIconImg.src = "./images/icon-reply.svg";
             replyIconImg.alt = "reply-icon";
             replyIconImg.className = "reply-icon";
             
             replyIconSpan.appendChild(replyIconImg);
+            reply.appendChild(replyIconSpan);
+            likeReplyContainer.appendChild(reply);
 
             let replyText = document.createElement("p");
             replyText.innerHTML = "REPLY";
