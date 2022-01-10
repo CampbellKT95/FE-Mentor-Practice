@@ -10,10 +10,10 @@ for (const property in data) {
 
             //first wrapper, contains profile-pic, username, timestamp
             let userWrapper = document.createElement("div");
-            userWrapper.class = "user-wrapper";
+            userWrapper.className = "user-wrapper";
 
             let profilePic = document.createElement("img");
-            profilePic.class = "avatar-img";
+            profilePic.className = "avatar-img";
             console.log(data[property][i].user.image.png)
             profilePic.src= data[property][i].user.image.png;
             profilePic.alt = data[property][i].user.username;
@@ -29,7 +29,7 @@ for (const property in data) {
 
             //second wrapper, contains the comment
             let commentWrapper = document.createElement("div");
-            commentWrapper.class = "comment";
+            commentWrapper.className = "comment";
 
             let commentText = document.createElement("p");
             commentText.innerHTML = data[property][i].content;
@@ -37,11 +37,11 @@ for (const property in data) {
 
             //third wrapper, contains likes & replies
             let likeReplyContainer = document.createElement("div");
-            likeReplyContainer.class = "like-reply-container";
+            likeReplyContainer.className = "like-reply-container";
 
             //contains likes, + & - symbols
             let likeNumberWrapper = document.createElement("div");
-            likeNumberWrapper.class = "like-number-wrapper"
+            likeNumberWrapper.className = "like-number-wrapper"
 
             let plusSymbol = document.createElement("span");
             plusSymbol.innerHTML = "+";
@@ -59,14 +59,14 @@ for (const property in data) {
             likeReplyContainer.appendChild(likeNumberWrapper);
 
             let reply = document.createElement("div");
-            reply.class = "reply-wrapper";
+            reply.className = "reply-wrapper";
 
             let replyIconSpan = document.createElement("span");
 
             let replyIconImg = document.createElement("img");
             replyIconImg.src = "../interactive-comments-section-main/images/icon-reply.svg";
             replyIconImg.alt = "reply-icon";
-            replyIconImg.class = "reply-icon";
+            replyIconImg.className = "reply-icon";
             
             replyIconSpan.appendChild(replyIconImg);
 
@@ -77,29 +77,14 @@ for (const property in data) {
             reply.appendChild(replyText);
 
             //adding the three wrappers to the overall comment container
-            commentsContainer.appendChild(userWrapper);
-            commentsContainer.appendChild(commentWrapper);
-            commentsContainer.appendChild(likeReplyContainer);
-        }
-    }
-}
-        // <div class="user-wrapper">
-        //     <img src="" alt="profile-pic" class="avatar-img" id="profile-img" />
-        //     <h2 id="username" >USERNAME</h2>
-        //     <p id="time">TIME</p>
-        // </div>
-        // <div class="comment">
-        //     <p id="comment">COMMENT</p>
-        // </div>
-        // <div class="like-reply-container">
-        //     <div class="like-number-wrapper">
-        //         <span>+</span>
-        //         <p id="number-likes">LIKES</p>
-        //         <span>-</span>
-        //     </div>
-        //     <div class="reply-wrapper">
-        //         <span><img src="./interactive-comments-section-main/images/icon-reply.svg" alt="reply-icon"
-        //         class="reply-icon" /></span>
-        //         <p>Reply</p>
-        //     </div>
-        // </div>
+            const commentsWrapper = document.createElement("div");
+            commentsWrapper.className = "comment-wrapper"
+
+            commentsWrapper.appendChild(userWrapper);
+            commentsWrapper.appendChild(commentWrapper);
+            commentsWrapper.appendChild(likeReplyContainer);
+
+            commentsContainer.appendChild(commentsWrapper);
+        };
+    };
+};
