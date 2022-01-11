@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" defer/>
-    <script src="scripts.js" defer></script>
+    <script src="data.js" defer></script>
+    <script src="allListItems.js" defer></script>
+    <script src="newToDo.js" defer></script>
     <title>To-Do List</title>
 </head>
 <body>
     <main>
         <div>
             <h1>TODO</h1>
-            <input type="text" placeholder="Create a new todo..." />
+            <form class="new-to-do-form">
+                <input type="text" placeholder="Create a new todo..." class="create-to-do" />
+            </form>
         </div>
         <div>
-            <ul>
-                <li>List items will be mapped through here</li>
+            <ul id="toDoList">
             </ul>
             <div>
                 <p># of items left</p>
