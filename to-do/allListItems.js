@@ -4,6 +4,7 @@ let numberOfItems = 0;
 
 function renderListItems(item){
     let listItemWrapper = document.createElement("div");
+    listItemWrapper.className = "list-item-wrapper";
 
     let listItem = document.createElement("li");
     
