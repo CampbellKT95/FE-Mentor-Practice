@@ -4,13 +4,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(0, 6%, 91%);
 }
 
 .to-do-container {
   display: flex;
   flex-direction: column;
-  /* background-color: hsl(0, 0%, 98%); */
-  background-color: yellow;
 }
 
 /* header (h1 & create-list-item input) */
@@ -66,16 +65,28 @@ body {
 
 #toDoList {
   padding: 0;
+  margin: 0;
 }
 
 .list-item-wrapper {
   border-bottom: 1px solid black;
-  padding: 1rem auto;
-  width: 100%;
+  padding: 1.5rem;
+  width: 89%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: hsl(237, 14%, 26%);
+}
+
+.list-item {
+  cursor: pointer;
+}
+
+.cross-icon {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
 }
 
 .number-clear-wrapper {
@@ -84,4 +95,35 @@ body {
   justify-content: space-between;
   width: 90%;
   margin: auto;
+  padding: 0.5rem;
+  color: hsl(236, 9%, 61%);
+}
+
+.filters-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: white;
+  width: 90%;
+  margin: 1rem auto auto auto;
+  border-radius: 5px;
+}
+
+.clear-completed {
+  cursor: pointer;
+}
+
+.filters-wrapper p {
+  cursor: pointer;
+  color: hsl(236, 9%, 61%);
+  font-weight: 700;
+}
+
+.filters-wrapper p:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.drag-drop {
+  margin: 2rem auto auto auto;
+  color: hsl(236, 9%, 61%);
 }

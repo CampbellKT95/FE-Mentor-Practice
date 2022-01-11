@@ -18,10 +18,12 @@ function renderListItems(item){
 
     //will need to add completion circle & delete x as well as border-bottom
     listItem.innerHTML = item;
+    listItem.className = "list-item"
 
     const crossIcon = document.createElement("img");
     crossIcon.src="./todo-app-main/images/icon-cross.svg";
     crossIcon.alt="delete-icon";
+    crossIcon.className = "cross-icon";
 
     //need to create a delete function
     crossIcon.addEventListener("click", () => {
@@ -41,6 +43,6 @@ data.map((item) => {
 
 function updateNumberOfItems(){
     numberOfItems++;
-    setNumberOfItems.innerHTML = numberOfItems;
+    setNumberOfItems.innerHTML = `${numberOfItems} items left`;
 };
 
