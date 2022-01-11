@@ -8,4 +8,5 @@ createNewToDo.addEventListener("change", (e) => {
 newToDoForm.addEventListener("submit", (e) => { 
     e.preventDefault();
     renderListItems(createNewToDo.value);
-})
+});
+
