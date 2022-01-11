@@ -8,6 +8,7 @@ function createComment(data, property) {
     };
 
     for (let i = 0; i < data[property].length; i++) {
+        console.log(data[property][i].replies)
 
         //first wrapper, contains profile-pic, username, timestamp
         let userWrapper = document.createElement("div");
@@ -87,5 +88,7 @@ function createComment(data, property) {
         commentsWrapper.appendChild(likeReplyContainer);
 
         commentsContainer.appendChild(commentsWrapper);
+
+        // for (let i = 0; i < data[property][i].replies.length; i++) {}
     };
 };
