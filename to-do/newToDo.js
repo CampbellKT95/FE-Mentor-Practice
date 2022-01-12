@@ -7,6 +7,10 @@ createNewToDo.addEventListener("change", (e) => {
 
 newToDoForm.addEventListener("submit", (e) => { 
     e.preventDefault();
-    renderListItems(createNewToDo.value);
+    data.push({
+        task: createNewToDo.value,
+        status: false
+    });
+    renderListItems();
 });
 

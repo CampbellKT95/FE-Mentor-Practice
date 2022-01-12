@@ -2,7 +2,10 @@ const toDoList = document.querySelector("#toDoList");
 const setNumberOfItems = document.querySelector(".number-of-items");
 let numberOfItems = 0;
 
-function renderListItems(item){
+//array of things already rendered, to be manipulated for filters
+const renderedItems = [];
+
+function createListItems(item){
     let listItemWrapper = document.createElement("div");
     listItemWrapper.className = "list-item-wrapper";
 
@@ -11,13 +14,15 @@ function renderListItems(item){
     listItem.addEventListener("click", () => {
         if (listItem.style.textDecoration === "") {
             listItem.style.textDecoration = "line-through";
+            item.status = true
         } else {
             listItem.style.textDecoration = "" ;
+            item.status = false;
         };
     });
 
     //will need to add completion circle & delete x as well as border-bottom
-    listItem.innerHTML = item;
+    listItem.innerHTML = item.task;
     listItem.className = "list-item"
 
     const crossIcon = document.createElement("img");
@@ -37,12 +42,20 @@ function renderListItems(item){
     updateNumberOfItems();
 };
 
-data.map((item) => {
-    renderListItems(item);
-});
+function renderListItems() {
+    data.map((item) => {
+        if (renderedItems.includes(item)) {
+            return renderedItems;
+        } else {
+            createListItems(item);
+            renderedItems.push(item);
+        };
+    });
+};
 
 function updateNumberOfItems(){
     numberOfItems++;
     setNumberOfItems.innerHTML = `${numberOfItems} items left`;
 };
 
+renderListItems();

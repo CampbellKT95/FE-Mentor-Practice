@@ -1,3 +1,14 @@
 const data = [
-    "walk Noodle", "dishes", "cook"
-]
+    {
+        task: "walk",
+        status: false
+    },
+    {
+        task: "cook",
+        status: false
+    },
+    {
+        task: "clean",
+        status: false
+    }
+];
