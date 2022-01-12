@@ -8,6 +8,7 @@ const renderedItems = [];
 function createListItems(item){
     let listItemWrapper = document.createElement("div");
     listItemWrapper.className = "list-item-wrapper";
+    listItemWrapper.id = item.id;
 
     let listItem = document.createElement("li");
     
@@ -30,7 +31,7 @@ function createListItems(item){
     crossIcon.alt="delete-icon";
     crossIcon.className = "cross-icon";
 
-    //need to create a delete function
+    //onClick delete item
     crossIcon.addEventListener("click", () => {
         listItemWrapper.remove();
     });

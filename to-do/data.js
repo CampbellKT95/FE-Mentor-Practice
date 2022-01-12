@@ -1,14 +1,17 @@
 const data = [
     {
         task: "walk",
-        status: false
+        status: false,
+        id: 1
     },
     {
         task: "cook",
-        status: false
+        status: false,
+        id: 2
     },
     {
         task: "clean",
-        status: false
+        status: false,
+        id: 3
     }
 ];

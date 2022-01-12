@@ -14,22 +14,25 @@ function filterAll() {
 function filterActive() {
     //map through all items with status: false to render
     const filterIncomplete = renderedItems.filter((item) => {
-        return item.status === false;
+        return item.status === true;
     });
-    console.log(filterIncomplete);
+
     filterIncomplete.map((item) => {
-        createListItems(item);
+        //need to remove items not in this list?
+        let el = document.getElementById(item.id);
+        el.remove();
     });
 };
 
 function filterComplete() {
     //map through all items with status: true to render
     const filterCompleted = renderedItems.filter((item) => {
-        return item.status === true;
+        return item.status === false;
     });
-    console.log(filterCompleted)
+
     filterCompleted.map((item) => {
-        createListItems(item);
+        let el = document.getElementById(item.id);
+        el.remove();
     });
 };
 
