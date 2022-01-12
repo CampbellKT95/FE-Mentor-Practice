@@ -43,7 +43,7 @@ function createListItems(item){
     updateNumberOfItems();
 };
 
-function renderListItems() {
+function initialRenderListItems() {
     data.map((item) => {
         if (renderedItems.includes(item)) {
             return renderedItems;
@@ -54,9 +54,21 @@ function renderListItems() {
     });
 };
 
+function reRenderListItems() {
+
+    data.map((item) => {
+        let deleteEl = document.getElementById(item.id);
+        deleteEl.remove();
+    })
+
+    data.map((item) => {
+        createListItems(item);    
+    });
+};
+
 function updateNumberOfItems(){
     numberOfItems++;
     setNumberOfItems.innerHTML = `${numberOfItems} items left`;
 };
 
-renderListItems();
+initialRenderListItems();

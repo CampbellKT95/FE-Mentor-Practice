@@ -14,6 +14,6 @@ newToDoForm.addEventListener("submit", (e) => {
         id: id
     });
     id++;
-    renderListItems();
+    initialRenderListItems();
 });
 

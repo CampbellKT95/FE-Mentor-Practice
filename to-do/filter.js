@@ -8,31 +8,34 @@ const completed = document.querySelector("#filter-completed")
 completed.addEventListener("click", () => filterComplete());
 
 function filterAll() {
-    renderListItems();
+    reRenderListItems();
 };
 
 function filterActive() {
     //map through all items with status: false to render
+    reRenderListItems();
+
     const filterIncomplete = renderedItems.filter((item) => {
         return item.status === true;
     });
 
     filterIncomplete.map((item) => {
-        //need to remove items not in this list?
         let el = document.getElementById(item.id);
-        el.remove();
+        el.style.display = "none";
     });
 };
 
 function filterComplete() {
     //map through all items with status: true to render
+    reRenderListItems();
+
     const filterCompleted = renderedItems.filter((item) => {
         return item.status === false;
     });
 
     filterCompleted.map((item) => {
         let el = document.getElementById(item.id);
-        el.remove();
+        el.style.display = "none";
     });
 };
 
