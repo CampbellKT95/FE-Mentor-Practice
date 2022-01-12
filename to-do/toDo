@@ -1,6 +1,8 @@
 
 successfully filtering, but now the "x items left" is continuously rising &
 not resetting
+    items remain same, but when checked off, should reduce # left;
+        unchecking adds correctly; checking off does not
 
 
 add clear completed functionality

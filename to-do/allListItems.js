@@ -15,10 +15,17 @@ function createListItems(item){
     listItem.addEventListener("click", () => {
         if (listItem.style.textDecoration === "") {
             listItem.style.textDecoration = "line-through";
-            item.status = true
+            item.status = true;
+            console.log(numberOfItems)
+            // this subtraction does not work for some reason
+            numberOfItems -= 2;
+            //
+            console.log(numberOfItems)
+            updateNumberOfItems();
         } else {
             listItem.style.textDecoration = "" ;
             item.status = false;
+            updateNumberOfItems();
         };
     });
 
@@ -59,7 +66,9 @@ function reRenderListItems() {
     data.map((item) => {
         let deleteEl = document.getElementById(item.id);
         deleteEl.remove();
-    })
+    });
+
+    numberOfItems = 0;
 
     data.map((item) => {
         createListItems(item);    
@@ -67,7 +76,7 @@ function reRenderListItems() {
 };
 
 function updateNumberOfItems(){
-    numberOfItems++;
+    numberOfItems++
     setNumberOfItems.innerHTML = `${numberOfItems} items left`;
 };
 
