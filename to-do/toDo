@@ -1,5 +1,9 @@
 
 add filter functionality
+    filters work, but currently re-render the filtered list. 
+        To fix, add a clear functionality & re-render the list? Or delete the
+        node
+            clear renderedlist? or some other avenue?
 
 add clear completed functionality
 
