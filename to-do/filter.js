@@ -7,6 +7,9 @@ active.addEventListener("click", () => filterActive());
 const completed = document.querySelector("#filter-completed")
 completed.addEventListener("click", () => filterComplete());
 
+const clear = document.querySelector(".clear-completed");
+clear.addEventListener("click", () => clearCompleted());
+
 function filterAll() {
     reRenderListItems();
 };
@@ -37,5 +40,24 @@ function filterComplete() {
         let el = document.getElementById(item.id);
         el.style.display = "none";
     });
+};
+
+function clearCompleted() {
+    const filteredItems = renderedItems.filter((item) => {
+        return item.status === true;
+    });
+
+    filteredItems.map((item) => {
+        let el = document.getElementById(item.id);
+        el.remove();
+        
+        let renderedIndex = renderedItems.indexOf(item);
+        renderedItems.splice(renderedIndex, 1);
+
+        let dataIndex = data.indexOf(item);
+        data.splice(dataIndex, 1);
+
+    });
+
 };
 

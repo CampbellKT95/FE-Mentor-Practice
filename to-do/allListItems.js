@@ -16,11 +16,8 @@ function createListItems(item){
         if (listItem.style.textDecoration === "") {
             listItem.style.textDecoration = "line-through";
             item.status = true;
-            console.log(numberOfItems)
-            // this subtraction does not work for some reason
+
             numberOfItems -= 2;
-            //
-            console.log(numberOfItems)
             updateNumberOfItems();
         } else {
             listItem.style.textDecoration = "" ;
