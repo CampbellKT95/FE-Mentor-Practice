@@ -143,3 +143,25 @@ body {
   margin: 2rem auto auto auto;
   color: hsl(236, 9%, 61%);
 }
+
+@media screen and (min-width: 1440px) {
+  .header-container {
+    width: 100%;
+  }
+
+  .header-wrapper {
+    width: 40%;
+  }
+
+  .list-items-container {
+    width: 40%;
+  }
+
+  .number-clear-wrapper {
+    width: 90%;
+  }
+
+  .filters-wrapper {
+    width: 40%;
+  }
+}

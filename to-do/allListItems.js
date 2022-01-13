@@ -38,6 +38,9 @@ function createListItems(item){
     //onClick delete item
     crossIcon.addEventListener("click", () => {
         listItemWrapper.remove();
+        numberOfItems -= 2;
+        updateNumberOfItems();
+
     });
 
     listItemWrapper.appendChild(listItem);
