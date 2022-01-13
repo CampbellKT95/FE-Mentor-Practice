@@ -44,6 +44,10 @@ body {
   width: 30px;
 }
 
+#theme-icon {
+  cursor: pointer;
+}
+
 .new-to-do-form {
   margin: 1.5rem auto 3.5rem auto;
 }
