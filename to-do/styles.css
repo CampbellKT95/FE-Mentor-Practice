@@ -57,6 +57,7 @@ body {
   border-radius: 5px;
   width: 90%;
   padding: 1rem;
+  color: hsl(236, 9%, 61%);
 }
 
 /* rendered list items */

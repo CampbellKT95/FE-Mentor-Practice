@@ -1,3 +1,8 @@
 dark mode mostly works, although <li> should have color = white
 
     NEEDS QUERYSELECTORALL ... DUH
+
+    edit to account for change to QUERYSELECTORALL
+        listItemsWrapper
+
+        will need to do forEach maybe?

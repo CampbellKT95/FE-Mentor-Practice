@@ -21,8 +21,7 @@ const createNewItem = document.querySelector(".create-to-do");
 //the rendered listItems
 const listItemsContainer = document.querySelector(".list-items-container");
 
-const listItemsWrapper = document.querySelector(".list-item-wrapper");
-console.log(listItemsWrapper)
+const listItemsWrapper = document.querySelectorAll(".list-item-wrapper");
 
 const clearCompletedWrapper = document.querySelector(".number-clear-wrapper");
 
@@ -40,7 +39,10 @@ function darkTheme() {
     createNewItem.style.color = "hsl(234, 39%, 85%)";
 
     listItemsContainer.style.backgroundColor = "hsl(233, 14%, 35%)";
-    listItemsWrapper.style.color = "white";
+
+    for (let i = 0; i < listItemsWrapper.length; i++) {
+        listItemsWrapper[i].style.color = "white";
+    };
 
     clearCompletedWrapper.style.backgroundColor = "hsl(233, 14%, 35%)";
     clearCompletedWrapper.style.color = "white";
@@ -60,8 +62,12 @@ function lightTheme() {
 
     createNewItem.style.backgroundColor = "white";
 
-    listItemsContainer.style.color = "hsl(237, 14%, 26%)";
-    listItemsWrapper.style.backgroundColor = "white";
+    // listItemsContainer.style.color = "";
+    listItemsContainer.style.backgroundColor = "white"
+
+    for (let i = 0; i < listItemsWrapper.length; i++) {
+        listItemsWrapper[i].style.color = "hsl(237, 14%, 26%)";
+    };
 
     clearCompletedWrapper.style.backgroundColor = "white";
     clearCompletedWrapper.style.color = "hsl(237, 14%, 26%)";
