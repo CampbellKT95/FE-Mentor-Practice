@@ -83,6 +83,17 @@ body {
   color: hsl(237, 14%, 26%);
 }
 
+.list-item-wrapper-dark {
+  border-bottom: 1px solid black;
+  padding: 1.5rem;
+  width: 89%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
 .list-item {
   cursor: pointer;
 }
