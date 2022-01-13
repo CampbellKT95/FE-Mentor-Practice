@@ -1,14 +1,12 @@
 //icon of sun/moon for light/dark
 const themeIcon = document.querySelector("#theme-icon");
 console.log(themeIcon)
-let theme = "dark";
+let theme = "light";
 themeIcon.addEventListener("click", () => {
-    if (theme === "dark") {
-        console.log("to light")
-        lightTheme();
-    } else {
-        console.log("to dark")
+    if (theme === "light") {
         darkTheme();
+    } else {
+        lightTheme();
     };
 });
 
@@ -22,43 +20,55 @@ const bannerImage = document.querySelector(".header-container");
 const createNewItem = document.querySelector(".create-to-do");
 
 //the rendered listItems
-const listItemsWrapper = document.querySelector("#toDoList");
+const listItemsWrapper = document.querySelector(".list-items-container");
+
+const clearCompletedWrapper = document.querySelector(".number-clear-wrapper");
 
 //final wrapper @ the bottom with filter options
 const filterWrappers = document.querySelector(".filters-wrapper");
+console.log(filterWrappers)
 
 function darkTheme() {
-    body.backgroundColor = "hsl(235, 21%, 11%)";
+    body.style.backgroundColor = "hsl(235, 21%, 11%)";
 
-    bannerImage.backgroundImage = `url("./todo-app-main/images/bg-mobile-dark.jpg")`;
+    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-mobile-dark.jpg")`;
 
-    themeIcon.src = "todo-app-main/images/icon-sun.svg";
+    themeIcon.style.src = "todo-app-main/images/icon-sun.svg";
 
-    createNewItem.backgroundColor = "hsl(233, 14%, 35%)";
-    createNewItem.color = "hsl(234, 39%, 85%)";
+    createNewItem.style.backgroundColor = "hsl(233, 14%, 35%)";
+    createNewItem.style.color = "hsl(234, 39%, 85%)";
 
-    listItemsWrapper.backgroundColor = "hsl(233, 14%, 35%)";
-    listItemsWrapper.color = "white";
+    listItemsWrapper.style.backgroundColor = "hsl(233, 14%, 35%)";
+    listItemsWrapper.style.color = "white";
 
-    filterWrappers.backgroundColor = "hsl(233, 14%, 35%)";
+
+    clearCompletedWrapper.style.backgroundColor = "hsl(233, 14%, 35%)";
+    clearCompletedWrapper.style.color = "white";
+
+    filterWrappers.style.backgroundColor = "hsl(233, 14%, 35%)";
 
     theme = "dark";
+    console.log("darkened")
 };
 
 
 function lightTheme() {
-    body.backgroundColor = "hsl(0, 6%, 91%)";
+    body.style.backgroundColor = "hsl(0, 6%, 91%)";
 
-    bannerImage.backgroundImage = `url("./todo-app-main/images/bg-mobile-light.jpg")`;
+    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-mobile-light.jpg")`;
 
-    themeIcon.src = "todo-app-main/images/icon-moon.svg";
+    themeIcon.style.src = "todo-app-main/images/icon-moon.svg";
 
-    createNewItem.backgroundColor = "white";
+    createNewItem.style.backgroundColor = "white";
 
-    listItemsWrapper.color = "hsl(237, 14%, 26%)";
-    listItemsWrapper.backgroundColor = "white";
+    listItemsWrapper.style.color = "hsl(237, 14%, 26%)";
+    listItemsWrapper.style.backgroundColor = "white";
 
-    filterWrappers.backgroundColor = "white";
+    clearCompletedWrapper.style.backgroundColor = "white";
+    clearCompletedWrapper.style.color = "hsl(237, 14%, 26%)";
+
+    filterWrappers.style.backgroundColor = "white";
 
     theme = "light";
+    console.log("lightened")
 };
