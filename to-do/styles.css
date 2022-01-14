@@ -147,6 +147,7 @@ body {
 @media screen and (min-width: 1440px) {
   .header-container {
     width: 100%;
+    background-image: url("./todo-app-main/images/bg-desktop-light.jpg");
   }
 
   .header-wrapper {

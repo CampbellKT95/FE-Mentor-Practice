@@ -31,7 +31,7 @@ const filterWrappers = document.querySelector(".filters-wrapper");
 function darkTheme() {
     body.style.backgroundColor = "hsl(235, 21%, 11%)";
 
-    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-mobile-dark.jpg")`;
+    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-desktop-dark.jpg")`;
 
     themeIcon.style.src = "todo-app-main/images/icon-sun.svg";
 
@@ -56,7 +56,7 @@ function darkTheme() {
 function lightTheme() {
     body.style.backgroundColor = "hsl(0, 6%, 91%)";
 
-    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-mobile-light.jpg")`;
+    bannerImage.style.backgroundImage = `url("./todo-app-main/images/bg-desktop-light.jpg")`;
 
     themeIcon.style.src = "todo-app-main/images/icon-moon.svg";
 
