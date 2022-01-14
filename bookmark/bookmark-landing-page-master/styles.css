@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
 /* whole site */
 html {
   margin: 0;
   padding: 0;
+  font-family: "Rubik", sans-serif;
 }
 
 .page-container {
@@ -28,4 +31,22 @@ html {
   height: 25px;
   width: 30px;
   margin-right: 1rem;
+}
+
+.feature-tab-1-container {
+  background-image: url("");
+  margin: 5rem auto auto auto;
+  width: 90%;
+}
+
+.features-tab-1-img {
+  max-width: 100%;
+  border: 10px solid black;
+  border-radius: 15px;
+}
+
+.feature-tab-1-container h1 {
+  font-size: 2rem;
+  margin: 4rem auto auto auto;
+  text-align: center;
 }
