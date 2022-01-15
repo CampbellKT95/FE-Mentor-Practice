@@ -46,7 +46,7 @@ html {
 }
 
 .features-tab-1-img {
-  max-width: 100%;
+  max-width: 90%;
   border: 10px solid black;
   border-radius: 15px;
 }
@@ -97,12 +97,12 @@ html {
 
 /* tab-2 */
 .feature-tab-2-container {
-  margin: auto;
+  margin: auto auto 4rem auto;
   width: 90%;
 }
 
 .feature-tab-2-container h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: auto;
   text-align: center;
   color: var(--header-color);
@@ -122,8 +122,132 @@ html {
   list-style-type: none;
   color: var(--header-color);
   text-align: center;
-  margin: 1rem auto;
   border-bottom: 1px solid hsl(229, 8%, 60%, 0.5);
-  padding: 1rem 0 1rem 0;
+  padding: 1.25rem 0 1.25rem 0;
   width: 100%;
+  cursor: pointer;
+}
+
+.features-wrapper li:first-child {
+  border-top: 1px solid hsl(229, 8%, 60%, 0.5);
+}
+
+/* tab-3 */
+.feature-tab-3-container {
+  margin: auto auto 4rem auto;
+  width: 90%;
+}
+
+.features-tab-3-img-wrapper {
+  margin-bottom: 3rem;
+}
+
+.feature-tab-3-container h2 {
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.feature-tab-3-container p {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--p-color);
+}
+
+/* tab-4 */
+.feature-tab-4-container {
+  margin: auto auto 4rem auto;
+  width: 90%;
+}
+
+.feature-tab-4-container h2 {
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.feature-tab-4-container p {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--p-color);
+}
+
+/* 
+extension container within tab-4 */
+.extension-container {
+  margin: 3rem auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.extension-wrapper {
+  box-shadow: 1px 4px 10px 0 hsl(229, 8%, 60%, 0.3);
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.extension-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.extension-img {
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+}
+
+.extension-img-wrapper h3 {
+  margin: auto auto auto auto;
+}
+
+.extension-img-wrapper p {
+  margin: 0.5rem auto 2rem auto;
+}
+
+.divider {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.add-btn-wrapper {
+  margin: auto;
+  padding-bottom: 1.5rem;
+}
+
+.install-btn {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 4px 10px 0 hsl(229, 8%, 60%, 0.3);
+  cursor: pointer;
+}
+
+/* faq-container */
+.faq-container {
+  margin: auto auto 4rem auto;
+  width: 90%;
+}
+
+.faq-container h2 {
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.faq-container p {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--p-color);
 }
