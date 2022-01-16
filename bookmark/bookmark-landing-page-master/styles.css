@@ -12,10 +12,14 @@ html {
   font-family: "Rubik", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -304,4 +308,127 @@ extension container within tab-4 */
   cursor: pointer;
   margin: 3rem auto auto auto;
   display: flex;
+}
+
+/* sign-up-container */
+.sign-up-container {
+  background-color: hsl(231, 69%, 60%);
+  width: 100%;
+  margin: auto;
+}
+
+.already-joined {
+  color: white;
+  margin: 4rem auto 1rem auto;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.sign-up-container h3 {
+  color: white;
+  margin: auto auto 2rem auto;
+  text-align: center;
+  font-size: 1.75rem;
+  width: 80%;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.sign-up-form input {
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  padding-bottom: 0;
+}
+
+.sign-up-form-input-error {
+  height: 2rem;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  padding-bottom: 0;
+  border: 3px solid hsl(0, 94%, 66%);
+}
+
+.input-error-notice-inactive {
+  display: none;
+}
+
+.input-error-notice-active {
+  display: inline-block;
+  position: absolute;
+  margin: 8px auto auto 90%;
+}
+
+.error-message {
+  display: inline-block;
+  color: white;
+  background-color: hsl(0, 94%, 66%);
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.error-message-inactive {
+  display: none;
+}
+
+.contact-btn {
+  margin: 1rem auto 3rem auto;
+  width: 100%;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 2.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* footer */
+.footer-container {
+  background-color: hsl(229, 31%, 21%);
+}
+
+.footer-logo {
+  color: white;
+  transform: scale(1.1);
+  display: flex;
+  margin: 2rem auto 2rem auto;
+}
+
+.footer-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: auto auto 2rem auto;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.footer-nav-wrapper h4 {
+  cursor: pointer;
+}
+
+.social-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
