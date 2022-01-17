@@ -16,11 +16,26 @@ closeModal.addEventListener("click", () => {
 //faq
 allFaqQuestions = document.querySelectorAll(".faq-question-wrapper");
 allFaqAnswers = document.querySelectorAll(".faq-answer-wrapper");
+faqArrows = document.querySelectorAll(".dropdown-arrow-inactive");
+
+let faq = {
+    0: false,
+    1: false,
+    2: false,
+    3: false
+};
 
 for (let i = 0; i < allFaqQuestions.length; i++) {
         allFaqQuestions[i].addEventListener("click", () => {
-        console.log("clicked")
-        allFaqAnswers[i].className = "faq-answer-wrapper-active";
+        if (faq[i] === false) {
+            allFaqAnswers[i].className = "faq-answer-wrapper-active";
+            faqArrows[i].className = "dropdown-arrow-active";
+            faq = {...faq, [i] : true};
+        } else {
+            allFaqAnswers[i].className = "faq-answer-wrapper";
+            faqArrows[i].className = "dropdown-arrow-inactive";
+            faq = {...faq, [i] : false};    
+        };
     });
 };
 //

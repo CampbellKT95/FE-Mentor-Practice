@@ -282,6 +282,7 @@ extension container within tab-4 */
   width: 20px;
   cursor: pointer;
   margin-top: 1.45rem;
+  transition: all linear 0.2s;
 }
 
 .dropdown-arrow-active {
@@ -291,6 +292,7 @@ extension container within tab-4 */
   margin-top: 1.45rem;
   transform: rotate(180deg);
   color: hsl(0, 94%, 66%);
+  transition: all linear 0.2s;
 }
 
 .faq-answer-wrapper {
