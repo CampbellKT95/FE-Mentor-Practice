@@ -1,6 +1,6 @@
 
-Not seeing blue curly thing for background img, may have to make it myself?
+mobile dropdown modal:
+    <div>100% width/height with opacity @ 0.7 ish, position absolute
+    and z-index of 2
 
-
-for features section-options: select just first option to give a border-top,
-all have border-bottom
+    <div> with options, placed in the center with z-index of 3
