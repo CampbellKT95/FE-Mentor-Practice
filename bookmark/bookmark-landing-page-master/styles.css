@@ -296,6 +296,12 @@ extension container within tab-4 */
 .faq-answer-wrapper {
   max-height: 0;
   overflow: hidden;
+  transition: all linear 0.2s;
+}
+
+.faq-answer-wrapper-active {
+  max-height: 10rem;
+  transition: all linear 0.2s;
 }
 
 .more-info-btn {
