@@ -18,7 +18,7 @@ allFaqQuestions = document.querySelectorAll(".faq-question-wrapper");
 allFaqAnswers = document.querySelectorAll(".faq-answer-wrapper");
 faqArrows = document.querySelectorAll(".dropdown-arrow-inactive");
 
-let faq = {
+const faq = {
     0: false,
     1: false,
     2: false,
@@ -39,3 +39,26 @@ for (let i = 0; i < allFaqQuestions.length; i++) {
     });
 };
 //
+
+// user email input
+const errorSpan = document.querySelector(".input-error-notice-inactive");
+const errorMessage = document.querySelector(".error-message-inactive");
+
+const emailInput = document.querySelector("#input-email");
+emailInput.addEventListener("change", (e) => {
+    emailInput.value = e.target.value;
+});
+
+const signUpForm = document.querySelector(".sign-up-form");
+signUpForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log(emailInput.value)
+    if (emailInput.value.includes("@")) {
+        errorSpan.className = "input-error-notice-inactive";
+        errorMessage.className = "error-message-inactive";
+    } else {
+        emailInput.className = "sign-up-form-input-error";
+        errorSpan.className = "input-error-notice-active";
+        errorMessage.className = "error-message";
+    };
+});

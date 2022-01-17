@@ -350,7 +350,7 @@ extension container within tab-4 */
   position: relative;
 }
 
-.sign-up-form input {
+.sign-up-form-input {
   height: 2.5rem;
   border-radius: 5px;
   border: none;
@@ -376,7 +376,7 @@ extension container within tab-4 */
 .input-error-notice-active {
   display: inline-block;
   position: absolute;
-  margin: 8px auto auto 90%;
+  margin: -1.85rem auto auto 90%;
 }
 
 .error-message {
@@ -385,6 +385,7 @@ extension container within tab-4 */
   background-color: hsl(0, 94%, 66%);
   padding-top: 0;
   margin-top: 0;
+  width: 95%;
   font-size: 12px;
   font-weight: 400;
   padding: 0.5rem 0 0.5rem 1rem;
