@@ -31,6 +31,14 @@ body {
   margin-top: 2rem;
 }
 
+.nav-options-wrapper {
+  display: none;
+}
+
+.nav-options {
+  display: none;
+}
+
 .logo {
   transform: scale(1.1);
   margin-left: 1rem;
@@ -511,4 +519,44 @@ extension container within tab-4 */
   justify-content: center;
   gap: 30px;
   margin-top: 18rem;
+}
+
+@media screen and (min-width: 1440px) {
+  /* navbar */
+  .logo {
+    transform: scale(1.1);
+    margin: 2rem auto auto 10rem;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .modal-container {
+    display: none;
+  }
+
+  .nav-options-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 3rem auto auto;
+  }
+
+  .nav-option {
+    cursor: pointer;
+  }
+
+  .login-btn {
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(0, 94%, 66%);
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    box-shadow: 1px 4px 10px 0 hsl(229, 8%, 60%, 0.3);
+  }
 }
