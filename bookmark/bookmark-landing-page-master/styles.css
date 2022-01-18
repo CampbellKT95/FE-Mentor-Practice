@@ -629,3 +629,40 @@ extension container within tab-4 */
     cursor: pointer;
   }
 }
+
+/* tab-2 */
+.feature-tab-2-container {
+  margin: auto auto 4rem auto;
+  width: 80%;
+}
+
+.feature-tab-2-container h2 {
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.feature-tab-2-container p {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--p-color);
+}
+
+.features-wrapper {
+  margin: 2rem auto 2rem auto;
+}
+
+.features-wrapper li {
+  list-style-type: none;
+  color: var(--header-color);
+  text-align: center;
+  border-bottom: 1px solid hsl(229, 8%, 60%, 0.5);
+  padding: 1.25rem 0 1.25rem 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.features-wrapper li:first-child {
+  border-top: 1px solid hsl(229, 8%, 60%, 0.5);
+}
